@@ -1,0 +1,7 @@
+body { text-align: center; }
+
+header, article, footer {
+	margin: 0 auto;
+	text-align: left;
+	width: 600px;
+}

@@ -1,0 +1,8 @@
+K. Recipe C.
+
+The dumbest possible recipe organizer for Katherine.
+
+TODO
+
+* Need to decide on a way to differentiate inferred tags and explicit tags.
+* Need to exclude stop words and abbreviations.

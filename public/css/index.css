@@ -1,0 +1,52 @@
+header, article, footer {
+	left: 0;
+	position: absolute;
+	right: 0;
+}
+
+article, footer {
+	border-color: #bbb;
+	border-style: dotted;
+	border-width: 1px 0 0 0;
+}
+
+header {
+	bottom: 86%;
+	top: 4%;
+}
+
+article {
+	bottom: 10%;
+	top: 14%;
+}
+
+footer {
+	bottom: 0;
+	top: 90%;
+}
+
+input[type=text], label, textarea { position: absolute; }
+
+label {
+	font-size: 12px;
+	left: 4px;
+	top: 0;
+	z-index: 2;
+}
+
+input[type=text], textarea {
+	border: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 1%;
+	width: 98%;
+}
+
+textarea {
+	bottom: 0;
+	font-size: 16px;
+	overflow: auto;
+	top: 0;
+}
+
+header input[type=text] { font-size: 44px; }

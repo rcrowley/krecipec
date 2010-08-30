@@ -1,0 +1,40 @@
+body {
+	margin: 4% 0 0 0;
+	padding: 0;
+}
+
+nav {
+	background: #ba55d3;
+	bottom: 96%;
+	left: 0;
+	padding: 4px;
+	position: absolute;
+	right: 0;
+	text-align: left;
+	top: 0;
+}
+
+nav h1 {
+	display: inline;
+	font-size: 16px;
+}
+
+nav ul, nav li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	list-style-type: none;
+	margin-left: 16px;
+}
+
+nav a {
+	color: white;
+}
+
+nav input[type=submit], nav span {
+	position: absolute;
+	right: 0;
+}
+nav span { padding-right: 4px; }
