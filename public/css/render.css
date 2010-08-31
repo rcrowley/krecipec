@@ -2,6 +2,7 @@ body { text-align: center; }
 
 header, article, footer {
 	margin: 0 auto;
+	padding: 0 24px;
 	text-align: left;
 	width: 600px;
 }

@@ -25,7 +25,7 @@ class App < Sinatra::Base
   helpers do
 
     def slugify(name)
-      name.downcase.gsub(/\s/, "-").gsub(/[^0-9a-z-]/, "")
+      name.strip.downcase.gsub(/\s/, "-").gsub(/[^0-9a-z-]/, "")
     end
 
     def deslugify(slug)
@@ -60,6 +60,10 @@ class App < Sinatra::Base
 
   end
 
+  before do
+    response["Cache-Control"] = "no-cache"
+  end
+
   get "/favicon.ico" do
     404
   end
@@ -89,7 +93,7 @@ class App < Sinatra::Base
       sets = tags.split(" ").map do |tag|
         Dir[File.join(settings.dir, "search", tag, "*")].
           map(&File.method(:basename))
-      end.flatten.map(&Set.method(:new))
+      end.map { |set| Set.new(set) }
       sets.unshift(sets.shift & sets.shift) while 1 < sets.length
       sets.first.to_a
     end.flatten.uniq

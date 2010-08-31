@@ -12,6 +12,9 @@ pid "/var/run/krecipec.pid"
 
 preload_app true
 
+stdout_path "/var/log/krecipec.log"
+stderr_path "/var/log/krecipec.log"
+
 worker_processes 2
 
 working_directory "/home/rcrowley/www/krecipec"

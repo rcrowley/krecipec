@@ -11,21 +11,21 @@ article, footer {
 }
 
 header {
-	bottom: 86%;
-	top: 4%;
+	height: 60px;
+	top: 30px;
 }
 
 article {
-	bottom: 10%;
-	top: 14%;
+	bottom: 60px;
+	top: 88px;
 }
 
 footer {
 	bottom: 0;
-	top: 90%;
+	height: 60px;
 }
 
-input[type=text], label, textarea { position: absolute; }
+input[type=text], label, textarea { position: absolute; background: transparent; }
 
 label {
 	font-size: 12px;
@@ -49,4 +49,4 @@ textarea {
 	top: 0;
 }
 
-header input[type=text] { font-size: 44px; }
+header input[type=text] { font-size: 32px; }

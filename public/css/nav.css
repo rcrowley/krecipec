@@ -1,13 +1,14 @@
 body {
-	margin: 4% 0 0 0;
+	margin: 48px 0 0 0;
 	padding: 0;
 }
 
 nav {
 	background: #ba55d3;
-	bottom: 96%;
+	height: 26px;
 	left: 0;
-	padding: 4px;
+	margin: 0;
+	padding: 4px 4px 0 4px;
 	position: absolute;
 	right: 0;
 	text-align: left;
@@ -15,8 +16,10 @@ nav {
 }
 
 nav h1 {
-	display: inline;
+	display: inline-block;
 	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 nav ul, nav li {
