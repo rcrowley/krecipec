@@ -14,6 +14,7 @@
     <li><a href="/search">Search</a></li>
   </ul>
   <span><a href="/<%= params[:slug] %>/edit">Edit</a></span>
+  <form action="/<%= params[:slug] %>/delete" method="post" style="display: inline;"><input type="submit" value="Delete"></form>
 </nav>
 <header>
   <h1><%= @name %></h1>

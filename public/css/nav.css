@@ -36,8 +36,7 @@ nav a {
 	color: white;
 }
 
-nav input[type=submit], nav span {
-	position: absolute;
-	right: 0;
-}
+nav input[type=submit], nav span { position: absolute; }
+nav span { right: 56px; }
+nav input[type=submit] { right: 0; }
 nav span { padding-right: 4px; }

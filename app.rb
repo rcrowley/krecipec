@@ -116,6 +116,13 @@ class App < Sinatra::Base
     erb :index
   end
 
+  post "/:slug/delete" do
+    File.unlink File.join(settings.dir, params[:slug])
+    Dir[File.join(settings.dir, "search", "*", params[:slug])].
+      map(&File.method(:unlink))
+    redirect "/"
+  end
+
   get "/:slug" do
     @name = deslugify(params[:slug])
     text = File.read(File.join(settings.dir, params[:slug]))
