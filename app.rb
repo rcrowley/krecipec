@@ -88,15 +88,24 @@ class App < Sinatra::Base
     redirect "/#{slug}"
   end
 
+  get "/all" do
+    @results = Dir[File.join(settings.dir, "*")].
+      reject(&File.method(:directory?))
+    @results.sort! { |a, b| File.mtime(b) <=> File.mtime(a) }
+    @results.map! &File.method(:basename)
+    erb :search
+  end
+
   get "/search" do
     @results = (params[:q] || "").split(" or ").map do |tags|
       sets = tags.split(" ").map do |tag|
-        Dir[File.join(settings.dir, "search", tag, "*")].
-          map(&File.method(:basename))
+        Dir[File.join(settings.dir, "search", tag, "*")]
       end.map { |set| Set.new(set) }
       sets.unshift(sets.shift & sets.shift) while 1 < sets.length
       sets.first.to_a
     end.flatten.uniq
+    @results.sort! { |a, b| File.mtime(b) <=> File.mtime(a) }
+    @results.map! &File.method(:basename)
     erb :search
   end
 
