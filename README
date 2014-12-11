@@ -2,6 +2,16 @@ K. Recipe C.
 
 The dumbest possible recipe organizer for Katherine.
 
+INSTALL
+
+This package depends on the RDiscount, Sinatra, and Unicorn gems plus, of course, a Ruby interpreter.
+
+Once the dependencies are met, run
+
+    rackup
+
+in the root directory (which contains config.ru) to start the application.
+
 TODO
 
 * Need to decide on a way to differentiate inferred tags and explicit tags.
